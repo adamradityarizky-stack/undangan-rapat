@@ -1,14 +1,114 @@
-@adamradityarizky-stack ➜ /workspaces/undangan-rapat (main) $ git init initialized empty git repository in c:users/rohis/document/undangan/.git
-usage: git init [-q | --quiet] [--bare] [--template=<template-directory>]
-         [--separate-git-dir <git-dir>] [--object-format=<format>]
-         [--ref-format=<format>]
-         [-b <branch-name> | --initial-branch=<branch-name>]
-         [--shared[=<permissions>]] [<directory>]
-@adamradityarizky-stack ➜ /workspaces/undangan-rapat (main) $ git add
-Nothing specified, nothing added.
-hint: Maybe you wanted to say 'git add .'?
-hint: Disable this message with "git config set advice.addEmptyPathspec false"
-@adamradityarizky-stack ➜ /workspaces/undangan-rapat (main) $ git commit -m"first
-comit" [main(root comit)a5c8e31] first comit 1 file changed,443 insetions (+) creat mode 100644 rohis.html
-bash: syntax error near unexpected token `('
-@adamradityarizky-stack ➜ /workspaces/undangan-rapat (main) $ 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Undangan Rapat Rohis SMK Yadika 13</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .page {
+            display: none;
+            padding: 50px;
+        }
+        .active {
+            display: block;
+        }
+        .invitation {
+            background-color: white;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .invitation h2 {
+            color: #4CAF50;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Undangan Rapat Rohis SMK Yadika 13</h1>
+        <nav>
+            <a onclick="showPage('home')">Home</a> |
+            <a onclick="showPage('about')">tentang kami</a> |
+            <a onclick="showPage('invitation')">Undangan Rapat</a>
+        </nav>
+    </header>
+
+    <!-- Halaman Home -->
+    <div id="home" class="page active">
+        <h2>Selamat Datang</h2>
+        <p>Selamat datang di website undangan rapat Rohis SMK Yadika 13. Jelajahi menu di atas untuk informasi lebih lanjut.</p>
+        <p>Klik <a onclick="showPage('invitation')">di sini</a> untuk melihat undangan rapat.</p>
+    </div>
+
+    <!-- Halaman About -->
+    <div id="about" class="page">
+        <h2>Tentang Website Ini</h2>
+        <p>Website ini dibuat untuk memfasilitasi undangan rapat Rohis SMK Yadika 13.</p>
+    </div>
+
+    <!-- Halaman Undangan Rapat -->
+    <div id="invitation" class="page">
+        <div class="invitation">
+            <h2>Undangan Rapat Rohis SMK Yadika 13</h2>
+            <p><strong>Kepada:</strong> Seluruh Anggota Rohis SMK Yadika 13</p>
+            <p><strong>Assalamu'alaikum Wr. Wb.</strong></p>
+            <p>Dengan hormat, kami mengundang Teman-Teman  untuk menghadiri rapat Rohis SMK Yadika 13 dengan agenda sebagai berikut:</p>
+            <ul style="text-align: left; display: inline-block;">
+                <li><strong>Tanggal:</strong> Sabtu, 15 Oktober 2026</li>
+                <li><strong>Waktu:</strong> 16:00 WIB - Selesai</li>
+                <li><strong>Tempat:</strong> mushola baitul makmur</li>
+                <li><strong>Agenda:</strong> Evaluasi</li>
+                <li><strong>Peserta:</strong> Ketua Rohis, Wakil Ketua, Sekretaris, Bendahara, dan Seluruh Anggota</li>
+            </ul>
+            <p>Dimohon kehadiran tepat waktu. Jika ada pertanyaan, hubungi Ketua Rohis di nomor 0812-8890-3871.</p>
+            <p><strong>Wassalamu'alaikum Wr. Wb.</strong></p>
+            <p><em>Ketua Rohis SMK Yadika 13</em><br>Ketua<br> Dimas Fernanda</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Rohis SMK Yadika 13</p>
+    </footer>
+
+    <script>
+        // Fungsi navigasi antar halaman
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
